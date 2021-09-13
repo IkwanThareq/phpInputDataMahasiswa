@@ -1,0 +1,60 @@
+
+
+
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dosen input pelajaran</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2>
+            Welcome Silahkan isi data dosen
+        </h2>
+    </div>
+   
+    <table border="1" align="center" width="70%">
+        <thead >
+            <th scope="col">Nik</th>
+            <th scope="col">Dosen</th>
+            <th scope="col">Matakuliah</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>151515</td>
+                <td>ikwan</td>
+                <td>Jarkom</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <form action="dosen.php" method="POST">
+        <div display: table-row;>
+            <label style="margin-right: 45px;">NIK</label>
+            <input type="text" name="Nik ">
+        </div>
+        
+        <div display: table-row;>
+            <label style="margin-right: 32px;">Dosen</label>
+            <input type="text" name="Dosen">
+        </div>
+        
+        <div display: table-row;>
+            <label>Matakuliah</label>
+            <input type="text" name="Matakuliah">
+        </div>
+       
+        <br>
+
+        <div display: table-row;>
+            <span>
+                <input type="submit">
+            </span>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <?php
-  $servername = "localhost";
+  $servername = "localhost:3307";
   $username = "root";
   $password = "";
   $dbname = "kampus";
@@ -57,9 +57,9 @@
     $conn->close();
     ?>
 
-
     </table>
     <br />
+    <!-- di bawah ini itu mendeklarasikan formnya -->
     <form method="POST" action="index.php" style="width: 50%;">
       <div style="width:100%;">
         <span style="width: 20%; display: inline-block;">NIK:</span>
