@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-
+  // input data from form in UI
   $nik = isset($_POST['nik']) ? $_POST['nik'] : "";
   $dosen = isset($_POST['dosen']) ? $_POST['dosen'] : "";
   $matakuliah = isset($_POST['matakuliah']) ? $_POST['matakuliah'] : "";
