@@ -1,5 +1,5 @@
 <?php
-  $servername = "localhost:3307";
+  $servername = "localhost";
   $username = "root";
   $password = "";
   $dbname = "kampus";
@@ -77,7 +77,7 @@
       <div>
         <span>
           <button type="submit" >
-            Kirim
+            kirim
           </button>
         </span>
       </div>
