@@ -1,4 +1,5 @@
 <?php
+// include 'header.php';
 $servername = "localhost:3307";
 $username = "root";
 $password = "";
@@ -17,12 +18,12 @@ if (!$conn) {
   $matakuliah = isset($_POST['matakuliah']) ? $_POST['matakuliah'] : "";
 
   // create data 
-  if (isset($_POST['id']) && empty(($_POST['id']))) {
+  if(isset($_POST['id']) && empty(($_POST['id']))) {
     $sql = "insert into datadosen(nik, dosen, matakuliah) values('$nik', '$dosen', '$matakuliah')";
     $result = $conn->query($sql);
   }
     // proses query untuk delete data berdasarkan id di database    
-  if (isset($_GET['aksi']) && $_GET['aksi'] == "hapus") {
+  if(isset($_GET['aksi']) && $_GET['aksi'] == "hapus") {
       // var sql => is query delete item in DB
     $sql = "delete from datadosen where id=".$_GET['id'];
     $result = $conn->query($sql);
@@ -33,14 +34,12 @@ if (!$conn) {
     $sql = "select * from datadosen where id=".$_GET['id'];
     $result = $conn->query($sql);
     $row_edit = mysqli_fetch_assoc($result);
+    // print_r($row_edit); die();
   }
 
-  if (isset($_POST['id']) && !empty(($_POST['id']))){
-    $sql = "update datadosen set 
-    nik='" . $_POST["nik"] .
-     "', dosen='" . $_POST["dosen"] .
-      "', matakuliah='" . $_POST["matakuliah"] . 
-      "' where id=" . $_POST["id"];
+  if(isset($_POST['id']) && !empty(($_POST['id']))){
+    $sql = "update datadosen set nik='" . $_POST["nik"] ."', dosen='" . $_POST["dosen"] ."', matakuliah='" . $_POST["matakuliah"] . "' where id=" . $_POST["id"];    
+    // $sql_new = "update datadosen set nik='" . $_POST["nik"] ."'";
     $result = $conn->query($sql);
   }
 
